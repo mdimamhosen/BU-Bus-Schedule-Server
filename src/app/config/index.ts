@@ -4,6 +4,8 @@ import path from 'path';
 dotenv.config({ path: path.join(process.cwd(), '.env') });
 
 export default {
+  default_password: process.env.DEFAULT_PASSWORD,
+  super_admin_password: process.env.SUPER_ADMIN_PASSWORD,
   port: process.env.PORT || 3000,
   mongoUri: process.env.MONGO_URI,
   jwtSecret: process.env.JWT_SECRET,
