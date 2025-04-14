@@ -1,6 +1,6 @@
 ﻿# 🚌 University Of Barishal Bus Schedule System - Backend
 
-This is the backend server for the **University of Barishal Bus Schedule System**, a robust, real-time platform designed to manage university transportation including buses, drivers, schedules, and student bookings.
+This is the backend server for the **University of Barishal Bus Schedule System**, a robust, real-time platform designed to manage university transportation, including buses, drivers, schedules, and student bookings.
 
 > Built with **Node.js**, **Express.js**, **TypeScript**, **MongoDB**, **Socket.io**, and **Zod** for validation.
 
