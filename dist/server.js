@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = __importDefault(require("./app"));
 const config_1 = __importDefault(require("./app/config"));
 const mongoose_1 = __importDefault(require("mongoose"));
+const DB_1 = __importDefault(require("./app/DB"));
 const port = process.env.PORT || 8000;
 let isConnected = false;
 let server;
@@ -26,6 +27,7 @@ function main() {
                 console.log(`Connected to database ${connection.connection.host}`);
                 isConnected = true;
             }
+            (0, DB_1.default)();
             server = app_1.default.listen(config_1.default.port, () => {
                 console.log(`Example app listening on port ${port}!`);
             });

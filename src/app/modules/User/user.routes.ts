@@ -3,6 +3,8 @@ import { USER_ROLES } from './user.constant';
 import auth from './../../middlewares/auth';
 import { UserController } from './user.controller';
 import { upload } from '../../utils/sendImageToCloudinary';
+import ValidateUserRequest from '../../middlewares/validateRequest';
+import { UserValidation } from './user.validation';
 
 const router = express.Router();
 
@@ -14,7 +16,7 @@ router.post(
     req.body = JSON.parse(req.body.data);
     next();
   },
-  // validateRequest(createAdminValidationSchema),
+  ValidateUserRequest(UserValidation.createUserValidationSchema),
   UserController.createAdmin
 );
 

@@ -10,8 +10,8 @@ export interface IUser extends Document {
   needPasswordChange?: boolean;
   mobileNumber?: string;
   status?: USER_STATUS_LIST;
-  isBlocked: boolean;
-  isDeleted: boolean;
+  isBlocked?: boolean;
+  isDeleted?: boolean;
   refreshToken?: string;
   profileImg?: string;
   accessToken?: string;

@@ -7,6 +7,8 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const path_1 = __importDefault(require("path"));
 dotenv_1.default.config({ path: path_1.default.join(process.cwd(), '.env') });
 exports.default = {
+    default_password: process.env.DEFAULT_PASSWORD,
+    super_admin_password: process.env.SUPER_ADMIN_PASSWORD,
     port: process.env.PORT || 3000,
     mongoUri: process.env.MONGO_URI,
     jwtSecret: process.env.JWT_SECRET,
